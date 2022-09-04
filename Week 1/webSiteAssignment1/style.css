@@ -51,6 +51,14 @@ iframe {
     width: 100%;
 }
 .footer-container {
+    padding: 20px;
     display: flex;
     flex-direction: row; 
+    background-color: black;
+    justify-content: center;
+}
+.list-item {
+    width: 50%;
+    text-align: center;
+    color: white;
 }
