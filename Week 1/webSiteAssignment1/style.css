@@ -37,6 +37,7 @@ h4 {
     flex-direction: row;
     padding: 15px;
     padding-top: 50px;
+    justify-content: center;
 }
 .video-container {
     width: 60%;  
