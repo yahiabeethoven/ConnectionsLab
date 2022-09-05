@@ -32,4 +32,11 @@ I have some previous experience working with HTML and CSS so figuring out how to
 
 I want to explore text fonts further in the future because I believe they are central in designing webpages and keeping themes consistent. I also look forward to knowing how to best implement footer icons and social objects without tens of lines of code that you find online. Last and definitely not least, I look forward to building realistic pages with actual interactive functionalities using JavaScript in the future.
 
+## UI Screenshots
+First half of the page:
+<img src='./UI/section1.png' title='Section 1' width='' alt='Section 1' />
+
+Second half of the page:
+<img src='./UI/section2.png' title='Section 2' width='' alt='Section 2' />
+
 
