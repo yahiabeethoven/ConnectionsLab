@@ -4,6 +4,9 @@ Submitted by: **Yahia Beethoven Tayel**
 
 **Previous Project Webpage** is a simple website that summarizes my final project in IM class Introduction to Interactive Media, It displays the main screen at the top and then shows a demo of the project alongside some descriptive text. 
 
+Here is a link to the webpage: 
+https://yahiabeethoven.github.io/ConnectionsLab/Week%201/webSiteAssignment1/
+
 ## Required Features
 
 The following **required** functionality is completed:
