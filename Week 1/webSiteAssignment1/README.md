@@ -25,4 +25,8 @@ The second one was more focused on the actual images from the project that appea
 
 <img src='./Wireframes/Wireframe Design 2.png' title='Wireframe 2' width='' alt='Wireframe 2' />
 
+I have some previous experience working with HTML and CSS so figuring out how to work with Flex boxes and other tags quickly was not challenging for me. However, it took me some trial and error and a bit of practice to refresh my memory and put together what each style attribute does exactly and how an HTML structure should look like. 
+
+I want to explore text fonts further in the future because I believe they are central in designing webpages and keeping themes consistent. I also look forward to knowing how to best implement footer icons and social objects without tens of lines of code that you find online. Last and definitely not least, I look forward to building realistic pages with actual interactive functionalities using JavaScript in the future.
+
 
