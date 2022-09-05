@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 I designed 2 main wireframes to showcase my project. 
 The first one had a nice image occupying the whole width of the screen with a main focus on the video and text description.
 
-<img src='https://github.com/yahiabeethoven/ConnectionsLab/tree/main/Week%201/webSiteAssignment1/Wireframes/Wireframe Design 1.png' title='Wireframe 1' width='' alt='Wireframe 1' />
+<img src='./Wireframes/Wireframe Design 1.png' title='Wireframe 1' width='' alt='Wireframe 1' />
 
 The second one was more focused on the actual images from the project that appear to the player when they complete the character quiz. Examples would be the specfic image of Chandler or Joey with their respective texts to immerse the user into the game. This version emphasizes these screenshots more than the demo or the text, but for the purposes of this assignment I believe simplicity and being direct is more valuable which is why I went with the first wireframe
 
