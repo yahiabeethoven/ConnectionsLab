@@ -12,8 +12,11 @@ const list_strings =
 "The third treatment scenario is bringing two subjects who belong to different groups and whose avatars accurately represent the group they identify with.",
 "The fourth treatment scenario is bringing two subjects who belong to groups that differ than their avatars, and whose avatars belong to different groups."]
 
+let count = 0;
+
 window.addEventListener("load", () => {
     console.log("Page has loaded");
+    
 
 });
 
@@ -24,6 +27,11 @@ function completed(number) {
     document.getElementById(textId).style.backgroundColor = "grey";
     document.getElementById(boxId).style.backgroundColor = "grey";
     document.getElementById(buttonId).style.visibility = "hidden";
+    count++;
+    if (count == 6) {
+        document.getElementsByTagName("header")[0].style.backgroundColor = "green";
+        document.getElementsByTagName("h1")[0].style.color = "white";
+    }
 }
 
 function showIt(number) {
