@@ -20,15 +20,12 @@ I designed one main wireframe for this project given its simple nature and direc
 
 <img src='./images/Timeline_Wireframe.png' title='Wireframe' width='' alt='Wireframe' />
 
-I have some previous experience working with HTML and CSS so figuring out how to work with Flex boxes and other tags quickly was not challenging for me. However, it took me some trial and error and a bit of practice to refresh my memory and put together what each style attribute does exactly and how an HTML structure should look like. 
-
-I want to explore text fonts further in the future because I believe they are central in designing webpages and keeping themes consistent. I also look forward to knowing how to best implement footer icons and social objects without tens of lines of code that you find online. Last and definitely not least, I look forward to building realistic pages with actual interactive functionalities using JavaScript in the future.
 
 ## UI Screenshots
-First half of the page:
-<img src='./UI/section1.png' title='Section 1' width='' alt='Section 1' />
+How the page looks like initially without any hovering or clicking
+<img src='./images/initial_view.png' title='Section 1' width='' alt='Section 1' />
 
-Second half of the page:
-<img src='./UI/section2.png' title='Section 2' width='' alt='Section 2' />
+How the page looks like after all blocks have been clicked
+<img src='./images/completed_view.png' title='Section 2' width='' alt='Section 2' />
 
 
