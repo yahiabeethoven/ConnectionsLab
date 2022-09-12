@@ -20,10 +20,10 @@ window.addEventListener("load", () => {
 function completed(number) {
     let textId = "step" + number;
     let boxId = "box" + number;
+    let buttonId = "box"+number+"-button";
     document.getElementById(textId).style.backgroundColor = "grey";
     document.getElementById(boxId).style.backgroundColor = "grey";
-    document.getElementById(number).style.zIndex = "2";
-    document.getElementById(number).after.style.color = "grey";
+    document.getElementById(buttonId).style.visibility = "hidden";
 }
 
 function showIt(number) {

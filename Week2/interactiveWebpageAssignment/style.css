@@ -78,18 +78,6 @@ ol {
     right: 0;
 }
 /* before and after styling inspired from W3Schools at https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline */
-/* left arrows */
-.container-left::before {
-    content: " ";
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 0;
-    border: medium solid black;
-    border-width: 12px 0 12px 12px;
-    border-color: transparent transparent transparent black;
-    z-index: 1;
-}
 /* left timeline points on the line */
 .container-left::after {
     content: "";
@@ -100,17 +88,6 @@ ol {
     background-color: white;
     top: 10%;
     border-radius: 50%;
-    z-index: 1;
-}
-/*right arrows*/
-.container-right::before {
-    content: " ";
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    border: medium solid black;
-    border-width: 11px 11px 11px 0;
-    border-color: transparent black transparent transparent;
     z-index: 1;
 }
 /* right timeline points on the line */
