@@ -25,6 +25,7 @@ function completed(number) {
     let boxId = "box" + number;
     let buttonId = "box"+number+"-button";
     document.getElementById(textId).style.backgroundColor = "grey";
+    document.getElementById(textId).style.color = "black";
     document.getElementById(boxId).style.backgroundColor = "grey";
     document.getElementById(buttonId).style.visibility = "hidden";
     count++;
