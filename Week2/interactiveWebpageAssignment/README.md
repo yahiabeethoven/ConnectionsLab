@@ -16,14 +16,9 @@ The following **required** functionality is completed:
 
 ## Progress
 
-I designed 2 main wireframes to showcase my project. 
-The first one had a nice image occupying the whole width of the screen with a main focus on the video and text description.
+I designed one main wireframe for this project given its simple nature and direct approach.
 
-<img src='./Wireframes/Wireframe Design 1.png' title='Wireframe 1' width='' alt='Wireframe 1' />
-
-The second one was more focused on the actual images from the project that appear to the player when they complete the character quiz. Examples would be the specfic image of Chandler or Joey with their respective texts to immerse the user into the game. This version emphasizes these screenshots more than the demo or the text, but for the purposes of this assignment I believe simplicity and being direct is more valuable which is why I went with the first wireframe
-
-<img src='./Wireframes/Wireframe Design 2.png' title='Wireframe 2' width='' alt='Wireframe 2' />
+<img src='./images/Timeline_Wireframe.png' title='Wireframe' width='' alt='Wireframe' />
 
 I have some previous experience working with HTML and CSS so figuring out how to work with Flex boxes and other tags quickly was not challenging for me. However, it took me some trial and error and a bit of practice to refresh my memory and put together what each style attribute does exactly and how an HTML structure should look like. 
 
