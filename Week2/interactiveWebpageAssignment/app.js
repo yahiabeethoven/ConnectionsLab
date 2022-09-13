@@ -16,8 +16,6 @@ let count = 0;
 
 window.addEventListener("load", () => {
     console.log("Page has loaded");
-    
-
 });
 
 function completed(number) {
