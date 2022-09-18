@@ -1,6 +1,6 @@
 
 var extracted_teamId;
-let team_name_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
+var team_name_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
 var t_name = "";
 window.addEventListener("load", () => {
 
@@ -11,10 +11,16 @@ window.addEventListener("load", () => {
     .then(response => response.json())
     .then(data => {
         // console.log(data.data.standings[0][0].team_id);
+        let cupGroups = data.data.standings;
+        console.log(cupGroups);
+        let groupTeams = cupGroups[0];
+        console.log(groupTeams);
         
-        extracted_teamId = data.data.standings[0][0].team_id;
+        let randomGroup = Math.floor(Math.random() * cupGroups.length);
+        let randomTeam = Math.floor(Math.random() * groupTeams.length);
+        extracted_teamId = data.data.standings[randomGroup][randomTeam].team_id;
         team_name_url += extracted_teamId;
-        team_name_url += "?apikey=3315c030-377d-11ed-b63b-53764e828d80"
+        team_name_url += "?apikey=3315c030-377d-11ed-b63b-53764e828d80";
         console.log(team_name_url)
         fetch(team_name_url)
         .then(response => response.json())
