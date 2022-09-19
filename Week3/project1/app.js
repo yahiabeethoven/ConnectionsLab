@@ -1,10 +1,14 @@
 
 var extracted_teamId;
-var team_name_url ="";
-var team_id_url ="";
+var team_name_url = "";
+var team_id_url = "";
 var t_name = "";
 var teamData;
-var countryId ="";
+var countryId = "";
+var button;
+var inputText;
+var africa_url;
+
 window.addEventListener("load", () => {
 
     console.log("Page has loaded");
@@ -22,7 +26,7 @@ window.addEventListener("load", () => {
         team_name_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
         team_name_url += extracted_teamId;
         team_name_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
-        console.log(team_name_url);
+        // console.log(team_name_url);
         
         fetch(team_name_url)
         .then(response => response.json())
@@ -33,13 +37,11 @@ window.addEventListener("load", () => {
 
         
     });
-    let button = document.getElementById("team-button");
+    button = document.getElementById("team-button");
         button.addEventListener("click", function() {
-            let inputText = document.getElementById("team-input").value;
+            inputText = document.getElementById("team-input").value;
 
-            let africa_url = "https://app.sportdataapi.com/api/v1/soccer/countries?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22&continent=Africa";
-            // let teamSearch;
-            
+            africa_url = "https://app.sportdataapi.com/api/v1/soccer/countries?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22&continent=Africa";
 
             fetch(africa_url)
             .then(response => response.json())
@@ -60,6 +62,7 @@ window.addEventListener("load", () => {
                 .then(response => response.json())
                 .then(info => {
                     teamData = info.data;
+                    console.log(teamData);
                     // teamName.innerHTML = t_name;
                 });
             })

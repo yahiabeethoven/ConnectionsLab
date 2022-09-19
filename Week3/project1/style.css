@@ -12,3 +12,25 @@ body {
     margin: 100px 0;
     color: white;
 }
+.project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.project-subheading {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    background-color: black;
+    width: 15%;
+    position: relative;
+}
+#team-input {
+    width: 15%;
+    position: relative;
+}
+#team-button {
+    width: 15%;
+    position: relative;
+}
