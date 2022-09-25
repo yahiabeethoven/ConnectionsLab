@@ -13,34 +13,39 @@
     
         <section class="project-container">
 
-            <h2 class="project-subheading">Choose Team Name: </h2> 
+            <h2 class="project-subheading">Choose Team! </h2> 
             
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <button onclick="myFunction()" class="dropbtn">Team Selection</button>
                 <div id="myDropdown" class="dropdown-content">
                   <input type="text" placeholder="Search.." id="myInput" onkeydown="filterFunction()">
-                    <a href="#130" id="130">Mamelodi Sundowns</a>
-                    <a href="#124" id="124">AL Ahly SC (Egy)</a>
-                    <a href="#119" id="119">Al Hilal</a>
-                    <a href="#84" id="84">Al-Merrikh SC (Omdurman)</a>
-                    <a href="#3" id="3">Raja Casablanca Athletic</a>
-                    <a href="#245" id="245">ES Setif</a>
-                    <a href="#443" id="443">Amazulu FC</a>
-                    <a href="#104" id="104">Horoya AC</a>
-                    <a href="#1" id="1">Esperance Tunis</a>
-                    <a href="#26" id="26">CR Belouizdad</a>
-                    <a href="#133" id="133">Etoile Sportive du Sahel</a>
-                    <a href="#29" id="29">Jwaneng Galaxy</a>
-                    <a href="#146" id="146">Wydad AC</a>
-                    <a href="#116" id="116">Atletico Petroleos de Luanda</a>
-                    <a href="#2" id="2">El Zamalek</a>
-                    <a href="#306" id="306">Sagrada Esperanca</a>
+                    <a href="#130" id="130" onclick="updatePage(id)">Mamelodi Sundowns</a>
+                    <a href="#124" id="124" onclick="updatePage(id)">AL Ahly SC (Egy)</a>
+                    <a href="#119" id="119"onclick="updatePage(id)">Al Hilal</a>
+                    <a href="#84" id="84"onclick="updatePage(id)">Al-Merrikh SC (Omdurman)</a>
+                    <a href="#3" id="3"onclick="updatePage(id)">Raja Casablanca Athletic</a>
+                    <a href="#245" id="245"onclick="updatePage(id)">ES Setif</a>
+                    <a href="#443" id="443"onclick="updatePage(id)">Amazulu FC</a>
+                    <a href="#104" id="104"onclick="updatePage(id)">Horoya AC</a>
+                    <a href="#1" id="1"onclick="updatePage(id)">Esperance Tunis</a>
+                    <a href="#26" id="26"onclick="updatePage(id)">CR Belouizdad</a>
+                    <a href="#133" id="133"onclick="updatePage(id)">Etoile Sportive du Sahel</a>
+                    <a href="#29" id="29"onclick="updatePage(id)">Jwaneng Galaxy</a>
+                    <a href="#146" id="146"onclick="updatePage(id)">Wydad AC</a>
+                    <a href="#116" id="116"onclick="updatePage(id)">Atletico Petroleos de Luanda</a>
+                    <a href="#2" id="2"onclick="updatePage(id)">El Zamalek</a>
+                    <a href="#306" id="306"onclick="updatePage(id)">Sagrada Esperanca</a>
                 </div>
               </div>
         </section>
         
         <section>
-            <h3 class=""></h3>
+            <h3>Selected team:<span class="chosen-team"></span></h3>
+            <p class="attributes"> Name: <span id="chosen_name"></span></p> 
+            <p class="attributes"> Short Name: <span id="chosen_short"></span></p> 
+            <p class="attributes"> Continent: <span id="chosen_continent"></span></p> 
+            <p class="attributes"> Country: <span id="chosen_country"></span></p> 
+            <img src="" id="new_bg">
         </section>
     </div>
     <script src="app.js"></script>

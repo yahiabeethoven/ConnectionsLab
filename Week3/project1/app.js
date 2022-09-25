@@ -31,21 +31,47 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
-  function filterFunction() {
+function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     div = document.getElementById("myDropdown");
     a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
         a[i].style.display = "";
-      } else {
+        } else {
         a[i].style.display = "none";
-      }
+        }
     }  
-  }
+}
+function updatePage(id) {
+
+    let chosen_url;
+    chosen_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
+    chosen_url += id;
+    chosen_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
+        // console.log(team_name_url);
+        
+        fetch(chosen_url)
+        .then(response => response.json())
+        .then(info => {
+            let t_name = info.data.name;
+            document.getElementById("chosen_name").innerHTML = t_name;
+            let short_code = info.data.short_code;
+            document.getElementById("chosen_short").innerHTML = short_code;
+            let continent = info.data.country.continent;
+            document.getElementById("chosen_continent").innerHTML = continent;
+            let country = info.data.country.name;
+            document.getElementById("chosen_country").innerHTML = country;
+            let new_bg = info.data.logo;
+            document.getElementById("new_bg").src = new_bg;
+            // document.body.style.backgroundImage = "url(new_bg)";
+            console.log(t_name, short_code, continent, country);
+        });
+}
+
 
 window.addEventListener("load", () => {
 
@@ -74,24 +100,23 @@ window.addEventListener("load", () => {
         //     teamName.innerHTML = t_name;
         
         
-        });
-
-        
-          
-          // Close the dropdown if the user clicks outside of it
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
-            }
-          }
     });
+  
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+    }
+});
+
     
 
     // button = document.getElementById("team-button");
