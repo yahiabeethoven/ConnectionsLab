@@ -40,9 +40,10 @@ function filterFunction() {
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-        } else {
-        a[i].style.display = "none";
+            a[i].style.display = "";
+        } 
+        else {
+            a[i].style.display = "none";
         }
     }  
 }
@@ -73,8 +74,7 @@ function updatePage(id) {
             if (info.data.logo) {
                 let new_bg = info.data.logo;
                 document.getElementById("new_bg").src = new_bg;
-            }
-            
+            }            
             // document.body.style.backgroundImage = "url(new_bg)";
             // console.log(t_name, short_code, continent, country);
         });
@@ -99,31 +99,30 @@ window.addEventListener("load", () => {
         team_name_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
         team_name_url += extracted_teamId;
         team_name_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
-        // console.log(team_name_url);
         
         fetch(team_name_url)
         .then(response => response.json())
+        .then (info => {});
         // .then(info => {
         //     t_name = info.data.name;
         //     teamName.innerHTML = t_name;
         
         
     });
-  
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn') && event.target.id!="myInput" ) {
-              console.log('clicked out', event.target.id);
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches(".dropbtn")&& event.target.id!="myInput") {
+            console.log('clicked out', event.target.id);
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
                 if (openDropdown.classList.contains('show')) {
                     openDropdown.classList.remove('show');
                 }
-               }
-              }
             }
+        }
+    }
 });
 
     
