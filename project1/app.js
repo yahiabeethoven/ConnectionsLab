@@ -83,8 +83,8 @@ function updatePage(id) {
                 }
             }
             else {
-                document.getElementById("chosen_continent").innerHTML = continent;
-                document.getElementById("chosen_country").innerHTML = country;    
+                document.getElementById("chosen_continent").innerHTML = "";   
+                document.getElementById("chosen_country").innerHTML = "";    
             } 
             if (info.data.logo) {
                 let new_bg = info.data.logo;
