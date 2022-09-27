@@ -61,8 +61,9 @@ function updatePage(id) {
             document.getElementById("chosen_name").innerHTML = t_name;
             if (info.data.short_code) {
                 let short_code = info.data.short_code;
+                document.getElementById("chosen_short").innerHTML = short_code;
             }           
-            document.getElementById("chosen_short").innerHTML = short_code;
+            
             if (info.data.country) {
                 let continent = info.data.country.continent;
                 document.getElementById("chosen_continent").innerHTML = continent;
@@ -75,7 +76,7 @@ function updatePage(id) {
             }
             
             // document.body.style.backgroundImage = "url(new_bg)";
-            console.log(t_name, short_code, continent, country);
+            // console.log(t_name, short_code, continent, country);
         });
 }
 
@@ -111,7 +112,8 @@ window.addEventListener("load", () => {
   
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn') && event.target.id.matches( "myInput")) {
+            console.log(event.target.id);
+        if (!event.target.matches('.dropbtn') || event.target.id != "myInput") {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
             for (i = 0; i < dropdowns.length; i++) {
