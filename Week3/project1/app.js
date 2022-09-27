@@ -112,18 +112,18 @@ window.addEventListener("load", () => {
   
         // Close the dropdown if the user clicks outside of it
         window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn') && event.target.id!="myInput" ) {
-              console.log('clicked out', event.target.id);
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-               }
-              }
+            console.log(event.target.id);
+        if (!event.target.matches('.dropbtn') || event.target.id != "myInput") {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
             }
+            }
+        }
+    }
 });
 
     
