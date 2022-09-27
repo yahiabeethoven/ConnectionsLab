@@ -54,48 +54,53 @@ function updatePage(id) {
     chosen_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
     chosen_url += id;
     chosen_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
-        // console.log(team_name_url);
+    
+    fetch(chosen_url)
+    .then(response => response.json())
+    .then(info => {
+
+        document.getElementsByClassName("attributes").visibility = "visible";
+        let t_name = info.data.name;
+        document.getElementById("chosen_name").innerHTML = t_name;
         
-        fetch(chosen_url)
-        .then(response => response.json())
-        .then(info => {
-            let t_name = info.data.name;
-            document.getElementById("chosen_name").innerHTML = t_name;
-            if (info.data.short_code) {
-                let short_code = info.data.short_code;
-                document.getElementById("chosen_short").innerHTML = short_code;
-            }           
-            
-            if (info.data.country) {
-                if (info.data.country.continent) {
-                    let continent = info.data.country.continent;
-                    document.getElementById("chosen_continent").innerHTML = continent;
-                }
-                else {
-                    document.getElementById("chosen_continent").innerHTML = "";    
-                }
-                if (info.data.country.name) {
-                    let country = info.data.country.name;
-                    document.getElementById("chosen_country").innerHTML = country;
-                }
-                else {
-                    document.getElementById("chosen_country").innerHTML = "";    
-                }
+        if (info.data.short_code) {
+            let short_code = info.data.short_code;
+            document.getElementById("chosen_short").innerHTML = short_code;
+        }           
+        
+        if (info.data.country) {
+            if (info.data.country.continent) {
+                let continent = info.data.country.continent;
+                document.getElementById("chosen_continent").innerHTML = continent;
             }
             else {
-                document.getElementById("chosen_continent").innerHTML = "";   
+                document.getElementById("chosen_continent").innerHTML = "";    
+            }
+            if (info.data.country.name) {
+                let country = info.data.country.name;
+                document.getElementById("chosen_country").innerHTML = country;
+            }
+            else {
                 document.getElementById("chosen_country").innerHTML = "";    
-            } 
-            if (info.data.logo) {
-                let new_bg = info.data.logo;
-                document.getElementById("new_bg").src = new_bg;
             }
-            else {
-                document.getElementById("new_bg").src = "";    
-            }            
-            // document.body.style.backgroundImage = "url(new_bg)";
-            // console.log(t_name, short_code, continent, country);
-        });
+        }
+        else {
+            document.getElementById("chosen_continent").innerHTML = "";   
+            document.getElementById("chosen_country").innerHTML = "";    
+        } 
+        if (info.data.logo) {
+            let new_bg = info.data.logo;
+            document.getElementById("new_bg").src = new_bg;
+        }
+        else {
+            document.getElementById("new_bg").src = "";    
+        }
+        for (let i = 0; i < 4; i++) {
+            document.getElementsByClassName("attributes")[i].style.visibility = "visible";
+        }
+        document.getElementById("new_bg").style.visibility = "visible"; 
+        document.getElementsByTagName("h3")[0].style.visibility = "visible";           
+    });
 }
 
 
@@ -130,7 +135,9 @@ window.addEventListener("load", () => {
     // inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
+
         if (!event.target.matches(".dropbtn")&& event.target.id!="myInput") {
+            
             console.log('clicked out', event.target.id);
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;

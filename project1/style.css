@@ -94,9 +94,11 @@ body {
 .attributes, h3 {
   text-justify: center;
   text-align: center;
+  visibility: hidden;
 }
 .logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  visibility: hidden;
 }
