@@ -30,7 +30,8 @@ teams_matrix.set("306","Sagrada Esperanca");
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-  
+
+// search feature inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
 function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
@@ -66,14 +67,31 @@ function updatePage(id) {
             }           
             
             if (info.data.country) {
-                let continent = info.data.country.continent;
-                document.getElementById("chosen_continent").innerHTML = continent;
-                let country = info.data.country.name;
-                document.getElementById("chosen_country").innerHTML = country;
+                if (info.data.country.continent) {
+                    let continent = info.data.country.continent;
+                    document.getElementById("chosen_continent").innerHTML = continent;
+                }
+                else {
+                    document.getElementById("chosen_continent").innerHTML = "";    
+                }
+                if (info.data.country.name) {
+                    let country = info.data.country.name;
+                    document.getElementById("chosen_country").innerHTML = country;
+                }
+                else {
+                    document.getElementById("chosen_country").innerHTML = "";    
+                }
             }
+            else {
+                document.getElementById("chosen_continent").innerHTML = continent;
+                document.getElementById("chosen_country").innerHTML = country;    
+            } 
             if (info.data.logo) {
                 let new_bg = info.data.logo;
                 document.getElementById("new_bg").src = new_bg;
+            }
+            else {
+                document.getElementById("new_bg").src = "";    
             }            
             // document.body.style.backgroundImage = "url(new_bg)";
             // console.log(t_name, short_code, continent, country);
@@ -109,6 +127,7 @@ window.addEventListener("load", () => {
         
         
     });
+    // inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
         if (!event.target.matches(".dropbtn")&& event.target.id!="myInput") {
