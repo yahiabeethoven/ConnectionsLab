@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>African Football</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script> -->
 </head>
 <body>
     <div class="page-container">
         <h1 class="project-heading">The UNDERRATED Champions League! </h1>
     
         <section class="project-container">
-
-            <h2 class="project-subheading">Choose Team! </h2> 
+            <div class="subheading-box">
+                <h2 class="project-subheading">Explore the participants of the CAF Champions League : </h2> 
+            </div>
             
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Team Selection</button>
+                <button onclick="myFunction()" class="dropbtn">Click here to Select Team</button>
                 <div id="myDropdown" class="dropdown-content">
                   <input type="text" placeholder="Search.." id="myInput" onkeydown="filterFunction()">
                     <a href="#130" id="130" onclick="updatePage(id)">Mamelodi Sundowns</a>
@@ -39,19 +42,22 @@
               </div>
         </section>
         
-        <section class="team-information">
+        <div class="team-information">
             <div class="team-details">
                 <h3>Selected team:<span class="chosen-team"></span></h3>
-                <p class="attributes"> Name: <span id="chosen_name"></span></p> 
+                <p class="attributes" id="name-desc"> Name: <span id="chosen_name"></span></p> 
                 <p class="attributes"> Short Name: <span id="chosen_short"></span></p> 
                 <p class="attributes"> Continent: <span id="chosen_continent"></span></p> 
                 <p class="attributes"> Country: <span id="chosen_country"></span></p> 
                 <img src="" class="logo" id="new_bg">
             </div>
             <div class="team-matches">
-                
+                <p > waserdtfvygbuhijn </p> 
+                <p > Short Name:</p> 
+                <p > Continent: </p> 
+                <p > Country: </p> 
             </div>
-        </section>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

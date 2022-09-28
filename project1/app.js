@@ -33,6 +33,7 @@ function myFunction() {
 
 // search feature inspired by https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
 function filterFunction() {
+    document.getElementById("myInput").style.cursor = "text";
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -54,6 +55,7 @@ function updatePage(id) {
     chosen_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
     chosen_url += id;
     chosen_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
+    matches_url = "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22&season_id=2264&date_from=2021-09-10";
     
     fetch(chosen_url)
     .then(response => response.json())
@@ -99,39 +101,19 @@ function updatePage(id) {
             document.getElementsByClassName("attributes")[i].style.visibility = "visible";
         }
         document.getElementById("new_bg").style.visibility = "visible"; 
-        document.getElementsByTagName("h3")[0].style.visibility = "visible";           
+        document.getElementsByTagName("h3")[0].style.visibility = "visible";  
+        document.getElementsByClassName("team-details")[0].style.visibility = "visible";         
+    });
+
+    fetch(matches_url)
+    .then(response => response.json())
+    .then(matches => {
+        console.log(matches.data[0].stats.ft_score);
     });
 }
 
 
 window.addEventListener("load", () => {
-
-    console.log("Page has loaded");
-    teamName = document.getElementById("team-name");
-    
-    fetch("https://app.sportdataapi.com/api/v1/soccer/standings?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22&season_id=2264")
-    .then(response => response.json())
-    .then(data => {
-        let cupGroups = data.data.standings;
-        let groupTeams = cupGroups[0];
-
-        let randomGroup = Math.floor(Math.random() * cupGroups.length);
-        let randomTeam = Math.floor(Math.random() * groupTeams.length);
-
-        extracted_teamId = cupGroups[randomGroup][randomTeam].team_id;
-        team_name_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
-        team_name_url += extracted_teamId;
-        team_name_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
-        
-        fetch(team_name_url)
-        .then(response => response.json())
-        .then (info => {});
-        // .then(info => {
-        //     t_name = info.data.name;
-        //     teamName.innerHTML = t_name;
-        
-        
-    });
     // inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
@@ -150,41 +132,3 @@ window.addEventListener("load", () => {
         }
     }
 });
-
-    
-
-    // button = document.getElementById("team-button");
-    //     button.addEventListener("click", function() {
-    //         inputText = document.getElementById("team-input").value;
-    //         console.log(extracted_teamId);
-    //         africa_url = "https://app.sportdataapi.com/api/v1/soccer/countries?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22&continent=Africa";
-
-    //         fetch(africa_url)
-    //         .then(response => response.json())
-    //         .then(continent => {
-    //             let teamSearch = continent.data;
-    //             for (var i in teamSearch) {
-    //                 if (teamSearch[i].name == inputText) {
-    //                     countryId = teamSearch[i].country_id;
-    //                     // console.log(countryId);
-    //                 }
-    //             }
-    //             team_id_url = "https://app.sportdataapi.com/api/v1/soccer/teams/";
-    //             team_id_url += countryId;
-    //             team_id_url += "?apikey=954a2ba0-37a1-11ed-95f3-3334eea78c22";
-    //             // console.log(team_id_url);
-                
-    //             fetch(team_id_url)
-    //             .then(response => response.json())
-    //             .then(info => {
-    //                 teamData = info.data;
-    //                 // console.log(teamData);
-    //                 // teamName.innerHTML = t_name;
-    //             });
-    //         })
-            
-    //         // console.log("button clicked");
-    //         // console.log("input text is: "+inputText);
-    //     })
-    
-   
