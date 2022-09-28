@@ -102,3 +102,13 @@ body {
   margin-right: auto;
   visibility: hidden;
 }
+.team-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: row;
+}
+.team-details {
+  
+}
