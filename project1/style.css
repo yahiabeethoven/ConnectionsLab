@@ -55,13 +55,17 @@ body {
   font-family: 'caf-font';
   font-size: 2.3em;
   text-justify: center;
+  
 }
 .subheading-box {
   background-color: rgb(60, 40, 24,0.8);
   border-radius: 3px;
-  margin: 15px;
   width: 100%;
   position: relative;
+  margin: 0px;
+  margin-bottom: 20px;
+  padding:10px;
+  
 }
 #team-input {
   width: 15%;
@@ -84,7 +88,7 @@ body {
   color: black;
   border-radius: 3px;
   font-family: 'caf-font';
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
   align-items: center;
   vertical-align: middle;
@@ -122,6 +126,8 @@ body {
   display: block;
   text-align: center;
   cursor: pointer;
+  font-family: caf-font;
+  font-size: 1.2em;
 }
 #myInput {
   text-align: center;
@@ -131,6 +137,7 @@ body {
   background-color: rgb(248, 232, 37);
   border-width:1px;
   border-color: rgb(60, 40, 24,0.7);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #myInput:hover {
   cursor: text;
