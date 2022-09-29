@@ -217,7 +217,7 @@ img {
 .displayed-match {
   margin: 30px; 
   /* padding: 50px; */
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, 0.95);
   border-radius: 5px;
   visibility: hidden;
   position: relative;
