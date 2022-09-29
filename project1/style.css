@@ -1,6 +1,6 @@
 @font-face {
   font-family: caf-font;
-  src: url("../fonts/caf.TTF");
+  src: url("./fonts/caf.TTF");
 }
 body {
   background-color: rgb(24, 158, 75);
@@ -338,6 +338,46 @@ table {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 5px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.footer {
+  position: fixed;
+  /* left: 0;
+  right: 0; */
+  bottom: 0%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-caf {
+  background-image: url("./resources/caf_logo.png");
+  background-position: center center;
+  background-size: cover;
 }
 
 
