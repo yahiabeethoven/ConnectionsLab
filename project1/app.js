@@ -27,6 +27,34 @@ teams_matrix.set("Atletico Petroleos de Luanda", "116");
 teams_matrix.set("El Zamalek", "2");
 teams_matrix.set("Sagrada Esperanca", "306");
 
+// inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("displayed-match");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
 // status, match_start, round.name, home_team.name, home_team.short_code, home_team.logo,
 // away_team.name, away_team.short_code, away_team.logo, stats.ft_score, venue.name, venue.city 
 
@@ -115,110 +143,126 @@ function updatePage(id) {
         else {
             document.getElementById("new_bg").src = "";    
         }
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 34; i++) {
             document.getElementsByClassName("attributes")[i].style.visibility = "visible";
         }
         document.getElementById("new_bg").style.visibility = "visible"; 
         document.getElementById("team_name").style.visibility = "visible"; 
-        // document.getElementById("season_title").style.visibility = "visible";   
-        document.getElementById("matches_title").style.visibility = "visible";  
         document.getElementById("team_attributes").style.visibility = "visible"; 
-        document.getElementById("latest_match").style.visibility = "visible";
-           
+
+        // document.getElementById("season_title").style.visibility = "visible";  
+        for (let i = 1; i < 6; i++) {
+            document.getElementById("matches_title"+i.toString()).style.visibility = "visible";  
+            document.getElementById("latest_match"+i.toString()).style.visibility = "visible";
+        } 
+        document.getElementsByClassName("next")[0].style.visibility = "visible";
+        document.getElementsByClassName("prev")[0].style.visibility = "visible";
+
+        for (let i = 0; i < 5; i++) {
+            document.getElementsByClassName("dot")[i].style.visibility = "visible";
+        }
+        
+        let counter = 1;
         fetch(matches_url)
         .then(response => response.json())
         .then(matches => {
             let total_matches = matches.data.length - 1;
             // console.log(matches.data);
-            for(let i = total_matches; i > 0; i--) {
+            for(let i = 0; i < total_matches; i++) {
                 let current_object = matches.data[i];
-                try{
-                    if((current_object.home_team) && (current_object.away_team)) {
-                        if (current_object.home_team.name) {
-                            if(current_object.away_team.name) {
-                                if( (current_object.home_team.name == t_name) || (current_object.away_team.name == t_name) ) {
-                                    if (current_object.status == "finished") {
-                                        let current_match, match_time, round, home_name, home_short, home_logo, away_name, away_short, away_logo = "N/A";
-                                    let score, stadium, city = "N/A"; 
-
-                                    if(current_object.match_start) {
-                                        match_time = current_object.match_start;
-                                    } 
-                                    if (current_object.round) {
-                                        if(current_object.round.name) {
-                                            round = current_object.round.name;
+                if (counter <= 5) {
+                    try{
+                        if((current_object.home_team) && (current_object.away_team)) {
+                            if (current_object.home_team.name) {
+                                if(current_object.away_team.name) {
+                                    if( (current_object.home_team.name == t_name) || (current_object.away_team.name == t_name) ) {
+                                        console.log(current_object.match_id)
+                                        if (current_object.status == "finished") {
+                                            let current_match, match_time, round, home_name, home_short, home_logo, away_name, away_short, away_logo = "N/A";
+                                        let score, stadium, city = "N/A"; 
+    
+                                        if(current_object.match_start) {
+                                            match_time = current_object.match_start;
+                                        } 
+                                        if (current_object.round) {
+                                            if(current_object.round.name) {
+                                                round = current_object.round.name;
+                                            }
+                                        } 
+                                        if (current_object.home_team.name) {
+                                            home_name = current_object.home_team.name;
                                         }
-                                    } 
-                                    if (current_object.home_team.name) {
-                                        home_name = current_object.home_team.name;
-                                    }
-                                    if(current_object.home_team.short_code) {
-                                        home_short = current_object.home_team.short_code;
-                                    }
-                                    if(current_object.home_team.logo) {
-                                        home_logo = current_object.home_team.logo;
-                                    }
-                                    if (current_object.away_team.name) {
-                                        away_name = current_object.away_team.name;
-                                    }
-                                    if(current_object.away_team.short_code) {
-                                        away_short = current_object.away_team.short_code;
-                                    }
-                                    if(current_object.away_team.logo) {
-                                        away_logo = current_object.away_team.logo;
-                                    }
-                                    if(current_object.stats) {
-                                        if(current_object.stats.ft_score) {
-                                            score = current_object.stats.ft_score;
+                                        if(current_object.home_team.short_code) {
+                                            home_short = current_object.home_team.short_code;
                                         }
-                                    }
-                                    if(current_object.venue) {
-                                        if(current_object.venue.name) {
-                                            stadium = current_object.venue.name;
+                                        if(current_object.home_team.logo) {
+                                            home_logo = current_object.home_team.logo;
                                         }
-                                        if(current_object.venue.city) {
-                                            city = current_object.venue.city;
+                                        if (current_object.away_team.name) {
+                                            away_name = current_object.away_team.name;
                                         }
-                                    }
-                                
-                                    if(!match_time) {match_time ="N/A";}
-                                    if(!round) {round ="N/A";}
-                                    if(!home_name) {home_name ="N/A";}
-                                    if(!home_short) {home_short ="N/A";}
-                                    if(!home_logo) {home_logo ="N/A";}
-                                    if(!away_name) {away_name ="N/A";}
-                                    if(!away_short) {away_short ="N/A";}
-                                    if(!away_logo) {away_logo ="N/A";}
-                                    if(!score) {score ="N/A";}
-                                    if(!stadium) {stadium = "N/A";}
-                                    if(!city) {city ="N/A";}
-
-                                    current_match = new Match( match_time, round, home_name, home_short, home_logo, away_name, away_short, away_logo,score, stadium, city);
-                                    console.log(current_match);
-                                    document.getElementById("round").innerHTML = "Round: " + current_match.round_name;
-                                    document.getElementById("home_logo").src = current_match.home_logo;
-                                    document.getElementById("home_team").innerHTML = current_match.home_name;
-                                    document.getElementById("home_short").innerHTML = current_match.home_short;
-                                    document.getElementById("away_logo").src= current_match.away_logo;
-                                    document.getElementById("away_team").innerHTML = current_match.away_name;
-                                    document.getElementById("away_short").innerHTML = current_match.away_short;
-                                    document.getElementById("match_time").innerHTML = current_match.match_start;
-                                    document.getElementById("score").innerHTML = current_match.score;
-                                    document.getElementById("venue").innerHTML = current_match.stadium;
-                                    document.getElementById("city").innerHTML = current_match.city;
-                                    break;
-                                    } 
-                                }  
-                                       
+                                        if(current_object.away_team.short_code) {
+                                            away_short = current_object.away_team.short_code;
+                                        }
+                                        if(current_object.away_team.logo) {
+                                            away_logo = current_object.away_team.logo;
+                                        }
+                                        if(current_object.stats) {
+                                            if(current_object.stats.ft_score) {
+                                                score = current_object.stats.ft_score;
+                                            }
+                                        }
+                                        if(current_object.venue) {
+                                            if(current_object.venue.name) {
+                                                stadium = current_object.venue.name;
+                                            }
+                                            if(current_object.venue.city) {
+                                                city = current_object.venue.city;
+                                            }
+                                        }
+                                    
+                                        if(!match_time) {match_time ="N/A";}
+                                        if(!round) {round ="N/A";}
+                                        if(!home_name) {home_name ="N/A";}
+                                        if(!home_short) {home_short ="N/A";}
+                                        if(!home_logo) {home_logo ="N/A";}
+                                        if(!away_name) {away_name ="N/A";}
+                                        if(!away_short) {away_short ="N/A";}
+                                        if(!away_logo) {away_logo ="N/A";}
+                                        if(!score) {score ="N/A";}
+                                        if(!stadium) {stadium = "N/A";}
+                                        if(!city) {city ="N/A";}
+    
+                                        current_match = new Match( match_time, round, home_name, home_short, home_logo, away_name, away_short, away_logo,score, stadium, city);
+                                        
+                                        console.log(current_match);
+                                        document.getElementById("round"+counter.toString()).innerHTML = "Round: \n" + current_match.round_name;
+                                        document.getElementById("home_logo"+counter.toString()).src = current_match.home_logo;
+                                        document.getElementById("home_team"+counter.toString()).innerHTML = current_match.home_name;
+                                        document.getElementById("home_short"+counter.toString()).innerHTML = current_match.home_short;
+                                        document.getElementById("away_logo"+counter.toString()).src= current_match.away_logo;
+                                        document.getElementById("away_team"+counter.toString()).innerHTML = current_match.away_name;
+                                        document.getElementById("away_short"+counter.toString()).innerHTML = current_match.away_short;
+                                        document.getElementById("match_time"+counter.toString()).innerHTML = "Date: \n" + current_match.match_start;
+                                        document.getElementById("score"+counter.toString()).innerHTML = current_match.score;
+                                        document.getElementById("venue"+counter.toString()).innerHTML = "Stadium: \n" + current_match.stadium;
+                                        document.getElementById("city"+counter.toString()).innerHTML = "City: \n" + current_match.city;
+                                        counter++;
+                                        // break;
+                                        } 
+                                    }  
+                                           
+                                }
                             }
+                            
                         }
-                        
+                    }
+                    
+                    catch(e) {
+                        console.log(e);
                     }
                 }
                 
-                catch(e) {
-                    console.log(e);
-                }
             }
             // status, match_start, round.name, home_team.name, home_team.short_code, home_team.logo,
             // away_team.name, away_team.short_code, away_team.logo, stats.ft_score, venue.name, venue.city  
