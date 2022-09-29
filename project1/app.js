@@ -9,23 +9,6 @@ let button;
 let inputText;
 let africa_url;
 let teamName;
-const teams_matrix = new Map();
-teams_matrix.set("Mamelodi Sundowns","130");
-teams_matrix.set("AL Ahly SC (Egy)", "124");
-teams_matrix.set("Al Hilal","119");
-teams_matrix.set("Al-Merrikh SC (Omdurman)", "84");
-teams_matrix.set("Raja Casablanca Athletic", "3");
-teams_matrix.set("ES Setif", "245");
-teams_matrix.set("Amazulu FC", "443");
-teams_matrix.set("Horoya AC", "104");
-teams_matrix.set("Esperance Tunis", "1");
-teams_matrix.set("CR Belouizdad", "26");
-teams_matrix.set("Etoile Sportive du Sahel", "133");
-teams_matrix.set("Jwaneng Galaxy", "29");
-teams_matrix.set("Wydad AC", "146");
-teams_matrix.set("Atletico Petroleos de Luanda", "116");
-teams_matrix.set("El Zamalek", "2");
-teams_matrix.set("Sagrada Esperanca", "306");
 
 // inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
 let slideIndex = 1;
