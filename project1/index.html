@@ -15,7 +15,7 @@
     
         <section class="project-container">
             <div class="subheading-box">
-                <h2 class="project-subheading">Explore the participants of the CAF Champions League : </h2> 
+                <h2 class="project-subheading">Get to know the participants of the most prestigious club competition in African football (The CAF Champions League) : </h2> 
             </div>
             
             <div class="dropdown">
@@ -43,19 +43,64 @@
         </section>
         
         <div class="team-information">
-            <div class="team-details">
-                <h3>Selected team:<span class="chosen-team"></span></h3>
-                <p class="attributes" id="name-desc"> Name: <span id="chosen_name"></span></p> 
-                <p class="attributes"> Short Name: <span id="chosen_short"></span></p> 
-                <p class="attributes"> Continent: <span id="chosen_continent"></span></p> 
-                <p class="attributes"> Country: <span id="chosen_country"></span></p> 
+            <div class="team-details" id="team_attributes">
+                <h3 id="team_name">Selected team:<span class="chosen-team"></span></h3>
+                <p class="attributes" id="name-desc"> Name: <span id="chosen_name" class="desc"></span></p> 
+                <p class="attributes"> Short Name: <span id="chosen_short" class="desc"></span></p> 
+                <p class="attributes"> Continent: <span id="chosen_continent" class="desc"></span></p> 
+                <p class="attributes"> Country: <span id="chosen_country" class="desc"></span></p> 
                 <img src="" class="logo" id="new_bg">
             </div>
             <div class="team-matches">
-                <p > waserdtfvygbuhijn </p> 
-                <p > Short Name:</p> 
-                <p > Continent: </p> 
-                <p > Country: </p> 
+                <!-- <h2 id="season_title">2021/2022 Season</h2> -->
+                
+                <table class="displayed-match" id="latest_match">
+                    <th colspan="3">
+                        <h3 id="matches_title">Latest Matches</h3>
+                    </th>
+                    
+                    <tr>
+                        <td class="attributes" colspan="3">
+                            <p class="desc" id="round" > Round</p>
+                        </td>
+                    </tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo">
+                            <p class="attributes" id="home_team" > Team 1</p>
+                            <p class="desc" id="home_short"> Short 1</p>
+                        </td>
+                        <td class="attributes">
+                            <p class="attributes" id="vs">vs</p>
+                        </td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo">
+                            <p class="attributes" id="away_team"> Team 2</p>
+                            <p class="desc" id="away_short"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" >
+                            <h3 id="score"> Score</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="match_time" class="attributes" colspan="3">
+                            <p class="desc" id="match_time"> Date</p>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td >
+                            <p class="desc" id="venue"> Stadium</p>
+                        </td>
+                        <td>
+                            <p class="desc"> - </p>
+                        </td>
+                        <td >
+                            <p class="desc" id="city"> City</p>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
