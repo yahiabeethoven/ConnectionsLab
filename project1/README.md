@@ -36,7 +36,9 @@ This was how the initial dropdown looked like before I styled it and made the se
 After many edits and styling, this is how the page looked like without the slideshow of latest matches.
 <img src="./resources/page_without_slideshow.png" alt="Intermediate Page"/>
 Most of the styling and features are completed with the exception of the footer, page icon, and the slideshow.
-After adding links to CAF Homepage
+After adding links to CAF Homepage and CAF Instagram page in the footer, a football icon as Favicon, and a slideshow of the 5 most recent matches of the particular team, this is how the final website looks like (under the subheading).
+<img src="./resources/newest.png" alt="Newest"/>
+
 ## Wireframes
 How the page looks like initially without any hovering or clicking
 <img src='./images/initial_view.png' title='Section 1' width='' alt='Section 1' />
