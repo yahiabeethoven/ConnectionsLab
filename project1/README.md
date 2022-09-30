@@ -47,6 +47,9 @@ After adding links to CAF Homepage and CAF Instagram page in the footer, a footb
 <img src="./resources/newest.png" alt="Newest"/>
 
 ## Wireframes
+I had one main wireframe for this project and I managed to stick to it until the end because of its simplicity and sufficiency in demonstrating teh necessary data to the intended audience.
+
+<img src="./resources/project1_wireframe.png" alt="Wireframe"/>
 
 ## Challenges
 ## Code Snippets
