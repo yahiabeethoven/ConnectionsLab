@@ -3,10 +3,13 @@
 
 Submitted by: **Yahia Beethoven Tayel**
 
-**African Football Awareness** is an interactive website that allows users to explore the teams participating in the Confederation of African Football (CAF)'s most prestigious club competition: the CAF Champions League.
+**African Football Awareness** is an interactive website that allows users to explore the teams participating in the Confederation of African Football (CAF)'s most prestigious club competition: the CAF Champions League in order to spread awareness about the underrated African football and cater to potential football fans.
 
 Here is a link to the webpage: 
 https://yahiabeethoven.github.io/ConnectionsLab/project1/
+
+Link to the GitHub Repository: 
+https://github.com/yahiabeethoven/ConnectionsLab/project1/
 
 ## Required Features
 
@@ -17,7 +20,12 @@ The following **required** functionality is completed:
 * [x] At least one user interaction
 * [x] Utilizes a data set
 
+## Motivation
+I chose to build this project for several reasons. First, I am an avid football fan and I love watching games of multiple teams such as Al Ahly SC, FC Barcelona, and the French national team. Furthermore, designing a page that revolves around football and its statistics is very enjoyable for me. This specific topic has become relevant recently because national African leagues have become more significant globally and there has been a noticable surge in African players joining top European teams in England, Spain, and Italy. Therefore, both European and non-European fans alike would be interested in getting to know more about African football and how these African superstars came to be by exploring their beginnings. The words "Champions League" and "football" are recognizable by most, so I used them throughout the websote to help resonate with the audience.
+
 ## Process
+
+
 ## Progress
 
 I designed one main wireframe for this project given its simple nature and direct approach.
