@@ -36,7 +36,7 @@ I then added a dropdown.
 
 <img src="./resources/old_dropdown.png" alt="Old Dropdown"/>
 
-This was how the initial dropdown looked like before I styled it and made the search bar work properly; it used to disappear teh moment the user clicks anywhere.
+This was how the initial dropdown looked like before I styled it and made the search bar work properly; it used to disappear the moment the user clicks anywhere.
 After many edits and styling, this is how the page looked like without the slideshow of latest matches.
 
 <img src="./resources/page_without_slideshow.png" alt="Intermediate Page"/>
@@ -47,7 +47,7 @@ After adding links to CAF Homepage and CAF Instagram page in the footer, a footb
 <img src="./resources/newest.png" alt="Newest"/>
 
 ## Wireframes
-I had one main wireframe for this project and I managed to stick to it until the end because of its simplicity and sufficiency in demonstrating teh necessary data to the intended audience.
+I had one main wireframe for this project and I managed to stick to it until the end because of its simplicity and sufficiency in demonstrating necessary data to the intended audience.
 
 <img src="./resources/project1_wireframe.png" alt="Wireframe"/>
 
