@@ -1,1 +1,42 @@
 
+# Project 1 - *African Football Awareness*
+
+Submitted by: **Yahia Beethoven Tayel**
+
+**African Football Awareness** is an interactive website that allows users to explore the teams participating in the Confederation of African Football (CAF)'s most prestigious club competition: the CAF Champions League.
+
+Here is a link to the webpage: 
+https://yahiabeethoven.github.io/ConnectionsLab/project1/
+
+## Required Features
+
+The following **required** functionality is completed:
+
+* [x] Data represented successfully
+* [x] At least a .html file, a .css file and a .js file
+* [x] At least one user interaction
+* [x] Utilizes a data set
+
+## Process
+## Progress
+
+I designed one main wireframe for this project given its simple nature and direct approach.
+
+<img src='./images/Timeline_Wireframe.png' title='Wireframe' width='' alt='Wireframe' />
+
+For this assignment, I wanted to create a very interactive timeline that takes you from the starting point all the way to the end point. The goal was to indicate to the user that they have "completed" a node after they read it somehow, and to smoothly transition between nodes. This was achieved, although not perfect because I would have liked to also gradually recolor the timeline vertical ruler along with the boxes to show progress, and I wanted to add more fun effects when the user is done going through all milestones such as a funny sound or some fireworks naimation across the screen. I could also ensure progress is saved in the future such that the web page is actually meaningful as a progress indicator. I could have also added some images to each milestone when it is hovered/clicked to elaborate on what exactly happened in that phase as documentation.
+
+Overall, I think the assignment was quite manageable, and had significantly refreshed my memory when it comes to working with JavaScript and further with HTML and CSS, so I'm glad that I got to do this webpage!
+
+
+## Wireframes
+How the page looks like initially without any hovering or clicking
+<img src='./images/initial_view.png' title='Section 1' width='' alt='Section 1' />
+
+How the page looks like after all blocks have been clicked
+<img src='./images/completed_view.png' title='Section 2' width='' alt='Section 2' />
+## Challenges
+## Code Snippets
+## Next Steps
+
+
