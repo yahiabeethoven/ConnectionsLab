@@ -41,7 +41,7 @@ After many edits and styling, this is how the page looked like without the slide
 
 <img src="./resources/page_without_slideshow.png" alt="Intermediate Page"/>
 
-Most of the styling and features are completed with the exception of the footer, page icon, and the slideshow.
+Most of the styling and features are completed with the exception of the footer, page icon, and the slideshow. I decided to make the containers shaped like cards because it is a universally relatable object for all users of the webpage.
 After adding links to CAF Homepage and CAF Instagram page in the footer, a football icon as Favicon, and a slideshow of the 5 most recent matches of the particular team, this is how the final website looks like (under the subheading).
 
 <img src="./resources/newest.png" alt="Newest"/>
@@ -60,8 +60,8 @@ In addition to that, deciding which attributes out of all these to display is a 
 
 <img src="./resources/json_sc.png" alt="Code"/>
 
-I also struggled in making the slideshow at first because I created sections for each image container early on and then I populated their attributes when prompted, but putting more matches (10 for example) would require creating containers dynamically which is slightly more difficult and complex in terms of JS code. Also, the footer did not look very nice because there was a slight gap on the left. 
+The main challenge was managing to balance between being interesting but not too overwhelming for non-fans, and making the unfamiliar intriguing. I also struggled in making the slideshow at first because I created sections for each image container early on and then I populated their attributes when prompted, but putting more matches (10 for example) would require creating containers dynamically which is slightly more difficult and complex in terms of JS code. Also, the footer did not look very nice because there was a slight gap on the left. 
 
 ## Next Steps
-
+Next steps for this project is adding a link in the latest matches card container where all historic matches of the team are accessible, in addition to other statistics such as top goalscorer, best results, standings in other leagues, and match possession for people who are interested in knowing more about that team. I could also add anotehr matches container to distinguish in color and display between upcoming matches in the future, and past matches that have already been played. I could also potentially add teams from other seasons that may not currently be in CAF Champions League, where I only include their past matches rather than future ones. One other possible extension to the website is adding a whole separate page that does all of the above but for the CAF Confederations Cup rather than the CAF Champions League.
 
