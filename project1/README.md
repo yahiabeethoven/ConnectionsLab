@@ -52,7 +52,16 @@ I had one main wireframe for this project and I managed to stick to it until the
 <img src="./resources/project1_wireframe.png" alt="Wireframe"/>
 
 ## Challenges
-## Code Snippets
+The challenges I faced in this project, as mentioned previously, was being able to access the intended data efficiently. The API only lists name, short name, logo, and country of a given team when you fetch its JSON file using its ID. However, getting other important information such as previous matches is not listed in the JSON file associated with the team, you have to manually search for it in the JSON file containing all matches of the tournament. In order to do that, that is what I wrote as code in order toresolve edge cases where any of the attributes of the match of the team are "null" and would lead to invalid results in following iterations of the for-loop.
+
+<img src="./resources/code_snippet.png" alt="Code"/>
+
+In addition to that, deciding which attributes out of all these to display is a big challenge because I try to put myself in the shoes of non-football fans and imagine what they will understand from all statistics. 
+
+<img src="./resources/json_sc.png" alt="Code"/>
+
+I also struggled in making the slideshow at first because I created sections for each image container early on and then I populated their attributes when prompted, but putting more matches (10 for example) would require creating containers dynamically which is slightly more difficult and complex in terms of JS code. Also, the footer did not look very nice because there was a slight gap on the left. 
+
 ## Next Steps
 
 
