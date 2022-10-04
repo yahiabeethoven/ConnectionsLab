@@ -36,20 +36,32 @@ I then added a dropdown.
 
 <img src="./resources/old_dropdown.png" alt="Old Dropdown"/>
 
-This was how the initial dropdown looked like before I styled it and made the search bar work properly; it used to disappear teh moment the user clicks anywhere.
+This was how the initial dropdown looked like before I styled it and made the search bar work properly; it used to disappear the moment the user clicks anywhere.
 After many edits and styling, this is how the page looked like without the slideshow of latest matches.
 
 <img src="./resources/page_without_slideshow.png" alt="Intermediate Page"/>
 
-Most of the styling and features are completed with the exception of the footer, page icon, and the slideshow.
+Most of the styling and features are completed with the exception of the footer, page icon, and the slideshow. I decided to make the containers shaped like cards because it is a universally relatable object for all users of the webpage.
 After adding links to CAF Homepage and CAF Instagram page in the footer, a football icon as Favicon, and a slideshow of the 5 most recent matches of the particular team, this is how the final website looks like (under the subheading).
 
 <img src="./resources/newest.png" alt="Newest"/>
 
 ## Wireframes
+I had one main wireframe for this project and I managed to stick to it until the end because of its simplicity and sufficiency in demonstrating necessary data to the intended audience.
+
+<img src="./resources/project1_wireframe.png" alt="Wireframe"/>
 
 ## Challenges
-## Code Snippets
-## Next Steps
+The challenges I faced in this project, as mentioned previously, was being able to access the intended data efficiently. The API only lists name, short name, logo, and country of a given team when you fetch its JSON file using its ID. However, getting other important information such as previous matches is not listed in the JSON file associated with the team, you have to manually search for it in the JSON file containing all matches of the tournament. In order to do that, that is what I wrote as code in order toresolve edge cases where any of the attributes of the match of the team are "null" and would lead to invalid results in following iterations of the for-loop.
 
+<img src="./resources/code_snippet.png" alt="Code"/>
+
+In addition to that, deciding which attributes out of all these to display is a big challenge because I try to put myself in the shoes of non-football fans and imagine what they will understand from all statistics. 
+
+<img src="./resources/json_sc.png" alt="Code"/>
+
+The main challenge was managing to balance between being interesting but not too overwhelming for non-fans, and making the unfamiliar intriguing. I also struggled in making the slideshow at first because I created sections for each image container early on and then I populated their attributes when prompted, but putting more matches (10 for example) would require creating containers dynamically which is slightly more difficult and complex in terms of JS code. Also, the footer did not look very nice because there was a slight gap on the left. 
+
+## Next Steps
+Next steps for this project is adding a link in the latest matches card container where all historic matches of the team are accessible, in addition to other statistics such as top goalscorer, best results, standings in other leagues, and match possession for people who are interested in knowing more about that team. I could also add anotehr matches container to distinguish in color and display between upcoming matches in the future, and past matches that have already been played. I could also potentially add teams from other seasons that may not currently be in CAF Champions League, where I only include their past matches rather than future ones. One other possible extension to the website is adding a whole separate page that does all of the above but for the CAF Confederations Cup rather than the CAF Champions League.
 
