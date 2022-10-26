@@ -31,7 +31,11 @@ app.get('/messages', (req,res) => {
     });
   
 })
+let port = process.env.PORT || 3000;
+app.listen(port, ()=> {
+    console.log('listening at ', port);
+});
 
-app.listen(3000, () => {
-  console.log("app is runnning");
-})
+// app.listen(3000, () => {
+//   console.log("app is runnning");
+// })
