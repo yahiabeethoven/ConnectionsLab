@@ -9,6 +9,16 @@ I based my website on a preset example of a 3D photo gallery on Aframe, and made
 I amended the example such that it tells a story about my home country, Egypt. Even though Egypt has one of the most ancient civilizations in history and is very recognizable globally, there is a misleading conception that it is a plain desert with camels. In an effort to fight that stereotype while still advertising for the iconic pyramids of Giza, I allow the user to explore three very different sceneries: sklyine of Cairo metropolitan city at sunset, pyramids in the morning, and a glimpse of the unique Qaitbay castle in Alexandria.
 I added icons of each of these scenes inside the boxes rather than text on a grey background to make the experience much more interesting.
 
+Code to alternate between each of the 360 images
+```
+<!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+      </a-entity>
+```
+
 # Challenges
 Some challenges in making this simple website include the fact that Egypt lacks publicly available high quality landscape picture that can be used as 360 degrees images for free. Some good resources exist but require a lot of money, which is obviously not possible for me. Therefore, I tried my best to mimick 360 image sby getting almost symmetrical wide images, cropping them as fit, and converting them to 360 degree images online. 
 Additionally, finding nice icons of Cairo that represent each of the themes was a bit challenging, there were mostly only icons of the pyramids, but I managed to find some others eventually.
