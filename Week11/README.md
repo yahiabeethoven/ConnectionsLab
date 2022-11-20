@@ -18,6 +18,8 @@ Code to alternate between each of the 360 images
         <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
       </a-entity>
 ```
+Choices available to user
+<img src="https://cdn.glitch.global/42245299-f247-4eb8-9b9f-baf336a35f45/Choices?v=1668964341498">
 
 # Challenges
 Some challenges in making this simple website include the fact that Egypt lacks publicly available high quality landscape picture that can be used as 360 degrees images for free. Some good resources exist but require a lot of money, which is obviously not possible for me. Therefore, I tried my best to mimick 360 image sby getting almost symmetrical wide images, cropping them as fit, and converting them to 360 degree images online. 
