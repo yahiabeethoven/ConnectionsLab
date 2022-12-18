@@ -181,6 +181,7 @@ class Instrument {
 ### Styling video feed: 
 despite being able to share video feed from the users, styling the video window was a challenge as it was displayed in a peculiar 
 way and was challenging to re-style. However, we were able to have the two video feeds share a required square in the middle of the page.
+<img src="./docImages/cameras.png">
 ### Sharing-Data: 
 In order to have a seamless user experience the sound of the instruments needed to be produced upon contact of the wrist's coordinates with the instrument on the screen. Therefore, it was necessary to implement a system that would share with the other user the signals that would generate  the sounds activated. Using the Sharing Data function in P5 Livemedia we were able to share the required data. 
 ### background music:
