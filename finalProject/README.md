@@ -24,6 +24,35 @@ Body-Beat required a lot of different tools and techniques inorder to perfect al
 ## Technical Difficulties:
 - Building the project was challenging at first because ml5 and PoseNet require very specific parameters to be accurate and detect motion accurately with the video captured. After many trial and error, we were able to obtain the perfect measurements and correct parameters to bets utilize these libraries.
 - Working with sockets was quite difficult, we actually did not use the traditional Socket.io functionalities but rather the SimplePeer functionalities. Also, the newest versions of Socket.io, node, and others were not necessarily easy to work with, so we standardized some versions for each that we were more familiar with
+- Synchronizing changes such as the sounds played and background music was a big challenge as well. Rather than transmit sound through the microphone back and forth for the instrument sound, we figured that would be too chaotic and the sound quality is much worse than if pre-recorded and played on-demand. For that, all the sounds played are done so locally after receiving signals from the server. Similarly we applied the same logic to background music. However, not only could you hear the sounds synchronously, but a user can turn it off for the other, and the checkbox indicating the choice updates when chosen by the other player to enhance interactivity.
+
+```
+    let backgroundButtons = document.querySelectorAll('input[type="checkbox"]');
+    for (let i = 0; i < backgroundButtons.length; i++) {
+      backgroundButtons[i].addEventListener("change", () => {
+        this.TimeToggle(backgroundButtons[i], i);
+      });
+    }
+
+  }
+
+
+  modelLoaded() {
+    console.log("poseNet ready");
+  }
+  TimeToggle(el, i) {
+    i++;
+    let index = i.toString();
+    console.log(index);
+    if (el.checked) {
+      this.backgroundSelected = el.value;
+    } else {
+      console.log("BACKGROUND MUSIC NOT SELECTED");
+      //this.backgroundSelected = "stop1";
+      this.backgroundSelected = "stop"+index;
+    }
+```
+- Working with sockets was quite difficult, we actually did not use the traditional Socket.io functionalities but rather the SimplePeer functionalities. Also, the newest versions of Socket.io, node, and others were not necessarily easy to work with, so we standardized some versions for each that we were more familiar with
 - We used the P5 LiveMedia library to enhance the multimedia features of the project, but we had to add some helper functions in order to make the client-server connection work smoothly along with all the other libraries we are also using.
 A snippet of what we added is included here
 ```
