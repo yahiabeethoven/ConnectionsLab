@@ -1,0 +1,22 @@
+body {
+    background-color: peachpuff;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.list-item {
+    color: aquamarine;
+}
+.container {
+    width: 50%;
+    background-color: yellow;
+}
+#BW {
+    color: blueviolet;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}

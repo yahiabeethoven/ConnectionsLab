@@ -1,0 +1,384 @@
+@font-face {
+  font-family: caf-font;
+  src: url("./fonts/caf.TTF");
+}
+body {
+  background-color: rgb(24, 158, 75);
+}
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: column;
+}
+.page-container::before {
+  content: "";
+  background-image: url("./images/caf_bg.jpeg");   
+  
+  /* background-attachment: fixed; */
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+  height: 140%;
+  overflow: scroll;
+  background-repeat:repeat-y;
+
+}
+
+.project-heading{
+  font-family: 'caf-font';
+  text-align: center;
+  /* margin: 80px 0; */
+  color: rgb(248, 232, 37);
+  position: relative;
+  font-size: 4em;
+  vertical-align: middle;
+  margin: 0px 0px;
+}
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.project-subheading {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-family: 'caf-font';
+  font-size: 2.3em;
+  margin:0px;
+}
+.subheading-box {
+  background-color: rgb(60, 40, 24,0.8);
+  border-radius: 3px;
+  width: 100%;
+  position: relative;
+  margin: 50px 0;
+  padding:10px; 
+}
+
+/* dropdown feature inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_filter */
+.dropbtn {
+  
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  /* position: relative; */
+  background-color: rgb(248, 232, 37);
+  color: rgb(60, 40, 24);
+  border-radius: 3px;
+  font-family: 'caf-font';
+  font-size: 1.7em;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  }
+  
+.dropbtn:hover, .dropbtn:focus {
+  background-color: rgb(224, 183, 0);
+}
+  
+.dropdown {
+  position: relative;
+  display:flexbox;
+}
+  
+.dropdown-content {
+  position: absolute;
+  background-color: rgb(248, 232, 37);
+  /* min-width: 160px; */
+  width: 100%;
+  height: 220px;
+  overflow: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+.dropdown-content a {
+  color: rgb(60, 40, 24);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-family: caf-font;
+  font-size: 1.2em;
+}
+#myInput {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  background-color: rgb(248, 232, 37);
+  border-width:1px;
+  border-color: rgb(60, 40, 24,0.7);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#myInput:hover {
+  cursor: text;
+}
+  
+.dropdown a:hover {
+  background-color: rgb(224, 183, 0);
+}
+
+.show {display: block;}
+
+/* end of dropdown feature insp above */
+
+.attributes, h3 {
+  text-justify: center;
+  text-align: center;
+  /* visibility: hidden; */
+  position: relative;
+  font-size: 1.1em;
+  
+}
+h3 {
+  font-family: 'caf-font';
+  font-size: 1.5em; 
+  color: rgb(60, 40, 24); 
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+  position: relative;
+  height:fit-content; 
+  width: fit-content; 
+}
+.team-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+.team-details {
+  /* margin: 30px;  */
+  padding: 20px;
+  background-color: rgba(248, 232, 37, 0.9);
+  border-radius: 5px;
+  visibility: hidden;
+  /* height:fit-content; */
+  position: relative;
+}
+.team-matches {
+  /* margin-right: 100px; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* width: 35%; */
+  position: relative;
+  max-width: 100%;
+}
+.attributes {
+  font-family: 'caf-font';
+  font-size: 1.3em;  
+  color: rgb(60, 40, 24); 
+}
+.desc {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+}
+
+table {
+  border-collapse: collapse;
+  /* border-spacing: 5px; */
+  /* table-layout: fixed ; */
+}
+td, p {
+  text-align: center;
+}
+td {
+  width: 33%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  td {
+    display: block;
+  }
+  .desc {
+      width: 90vw;
+  }
+}
+
+.displayed-match {
+  margin: 50px; 
+  margin-bottom: 0px;
+  padding: 40px;
+  background-color: rgba(255,255,255, 0.95);
+  border-radius: 5px;
+  visibility: hidden;
+  position: relative;
+  /* width:90%; */
+  border-color: rgb(60, 40, 24);
+  border-style: solid;
+}
+#latest-match1 {
+  background-color: rgba(248, 232, 37, 0.9);
+}
+.desc {
+  text-align: center;
+  width: 100%;
+}
+#season_title1, #season_title2, #season_title3, #season_title4, #season_title5 {
+  font-family: 'caf-font';
+  text-align: center;
+  color: rgb(248, 232, 37);
+  position: relative;
+  font-size: 2em;
+  vertical-align: middle;
+  margin: 0px 0px;
+  visibility: hidden;
+}
+
+#matches_title1, #matches_title2, #matches_title3, #matches_title4, #matches_title5  {
+  visibility: hidden;
+}
+#city1, #city2, #city3, #city4, #city5 {
+  text-align:left;
+}
+#venue1, #venue2, #venue3, #venue4, #venue5 {
+  text-align: right;
+}
+#score1, #score2, #score3, #score4, #score5 {
+  font-size: 3em;
+  margin: 0px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+/* inspired from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow*/
+* {box-sizing: border-box}
+.displayed-match {display: none}
+table {vertical-align: middle;}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  right: inherit;
+  visibility: hidden;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  visibility: hidden;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.fa-instagram {
+  background: rgb(60, 40, 24);
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 5px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+.footer {
+  position: fixed;
+  /* left: 0;
+  right: 0; */
+  bottom: 0%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-caf {
+  background-image: url("./resources/caf_logo.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+
+

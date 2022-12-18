@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Football</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script> -->
+    <link rel="icon" href="./resources/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="project-heading">The UNDERRATED Champions League! </h1>
+    
+        <section class="project-container">
+            <div class="subheading-box">
+                <h2 class="project-subheading">Get to know the participants of the most prestigious club competition in African football (The CAF Champions League) : </h2> 
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Click here to Select a Team</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <input type="text" placeholder="Search.." id="myInput" onkeydown="filterFunction()">
+                    <a href="#130" id="130" onclick="updatePage(id)">Mamelodi Sundowns</a>
+                    <a href="#124" id="124" onclick="updatePage(id)">AL Ahly SC (Egy)</a>
+                    <a href="#119" id="119"onclick="updatePage(id)">Al Hilal</a>
+                    <a href="#84" id="84"onclick="updatePage(id)">Al-Merrikh SC (Omdurman)</a>
+                    <a href="#3" id="3"onclick="updatePage(id)">Raja Casablanca Athletic</a>
+                    <a href="#245" id="245"onclick="updatePage(id)">ES Setif</a>
+                    <a href="#443" id="443"onclick="updatePage(id)">Amazulu FC</a>
+                    <a href="#104" id="104"onclick="updatePage(id)">Horoya AC</a>
+                    <a href="#1" id="1"onclick="updatePage(id)">Esperance Tunis</a>
+                    <a href="#26" id="26"onclick="updatePage(id)">CR Belouizdad</a>
+                    <a href="#133" id="133"onclick="updatePage(id)">Etoile Sportive du Sahel</a>
+                    <a href="#29" id="29"onclick="updatePage(id)">Jwaneng Galaxy</a>
+                    <a href="#146" id="146"onclick="updatePage(id)">Wydad AC</a>
+                    <a href="#116" id="116"onclick="updatePage(id)">Atletico Petroleos de Luanda</a>
+                    <a href="#2" id="2"onclick="updatePage(id)">El Zamalek</a>
+                    <a href="#306" id="306"onclick="updatePage(id)">Sagrada Esperanca</a>
+                </div>
+              </div>
+        </section>
+        
+        <div class="team-information">
+            <div class="team-details" id="team_attributes">
+                <h3 id="team_name">Selected team:<span class="chosen-team"></span></h3>
+                <p class="attributes" id="name-desc"> Name: <span id="chosen_name" class="desc"></span></p> 
+                <p class="attributes"> Short Name: <span id="chosen_short" class="desc"></span></p> 
+                <p class="attributes"> Continent: <span id="chosen_continent" class="desc"></span></p> 
+                <p class="attributes"> Country: <span id="chosen_country" class="desc"></span></p> 
+                <img src="" class="logo" id="new_bg">
+            </div>
+            <div class="team-matches">
+                <!-- <h2 id="season_title">2021/2022 Season</h2> -->
+                
+                <table class="displayed-match" id="latest_match1">
+                    <th colspan="3"><h3 id="matches_title1">Latest Match</h3></th>
+                    
+                    <tr><td class="attributes" colspan="3"><p class="desc" id="round1" > Round</p></td></tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo1">
+                            <p class="attributes" id="home_team1" > Team 1</p>
+                            <p class="desc" id="home_short1"> Short 1</p>
+                        </td>
+                        <td class="attributes"><p class="attributes" id="vs">vs</p></td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo1">
+                            <p class="attributes" id="away_team1"> Team 2</p>
+                            <p class="desc" id="away_short1"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" ><h3 id="score1"> Score</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="attributes" colspan="3"><p class="desc" id="match_time1"> Date</p></td>
+                    </tr>   
+                    <tr>
+                        <td ><p class="desc" id="venue1"> Stadium</p></td>
+                        <td><p class="desc"> - </p></td>
+                        <td ><p class="desc" id="city1"> City</p></td>
+                    </tr>
+                </table>
+
+                <table class="displayed-match" id="latest_match2">
+                    <th colspan="3"><h3 id="matches_title2">Latest Matches</h3></th>
+                    
+                    <tr><td class="attributes" colspan="3"><p class="desc" id="round2" > Round</p></td></tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo2">
+                            <p class="attributes" id="home_team2" > Team 1</p>
+                            <p class="desc" id="home_short2"> Short 1</p>
+                        </td>
+                        <td class="attributes"><p class="attributes" id="vs">vs</p></td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo2">
+                            <p class="attributes" id="away_team2"> Team 2</p>
+                            <p class="desc" id="away_short2"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" ><h3 id="score2"> Score</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="attributes" colspan="3"><p class="desc" id="match_time2"> Date</p></td>
+                    </tr>   
+                    <tr>
+                        <td ><p class="desc" id="venue2"> Stadium</p></td>
+                        <td><p class="desc"> - </p></td>
+                        <td ><p class="desc" id="city2"> City</p></td>
+                    </tr>
+                </table>
+
+                <table class="displayed-match" id="latest_match3">
+                    <th colspan="3"><h3 id="matches_title3">Latest Matches</h3></th>
+                    
+                    <tr><td class="attributes" colspan="3"><p class="desc" id="round3" > Round</p></td></tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo3">
+                            <p class="attributes" id="home_team3" > Team 1</p>
+                            <p class="desc" id="home_short3"> Short 1</p>
+                        </td>
+                        <td class="attributes"><p class="attributes" id="vs">vs</p></td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo3">
+                            <p class="attributes" id="away_team3"> Team 2</p>
+                            <p class="desc" id="away_short3"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" ><h3 id="score3"> Score</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="attributes" colspan="3"><p class="desc" id="match_time3"> Date</p></td>
+                    </tr>   
+                    <tr>
+                        <td ><p class="desc" id="venue3"> Stadium</p></td>
+                        <td><p class="desc"> - </p></td>
+                        <td ><p class="desc" id="city3"> City</p></td>
+                    </tr>
+                </table>
+
+                <table class="displayed-match" id="latest_match4">
+                    <th colspan="3"><h3 id="matches_title4">Latest Matches</h3></th>
+                    
+                    <tr><td class="attributes" colspan="3"><p class="desc" id="round4" > Round</p></td></tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo4">
+                            <p class="attributes" id="home_team4" > Team 1</p>
+                            <p class="desc" id="home_short4"> Short 1</p>
+                        </td>
+                        <td class="attributes"><p class="attributes" id="vs">vs</p></td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo4">
+                            <p class="attributes" id="away_team4"> Team 2</p>
+                            <p class="desc" id="away_short4"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" ><h3 id="score4"> Score</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="attributes" colspan="3"><p class="desc" id="match_time4"> Date</p></td>
+                    </tr>   
+                    <tr>
+                        <td ><p class="desc" id="venue4"> Stadium</p></td>
+                        <td><p class="desc"> - </p></td>
+                        <td ><p class="desc" id="city4"> City</p></td>
+                    </tr>
+                </table>
+
+                <table class="displayed-match" id="latest_match5">
+                    <th colspan="3"><h3 id="matches_title5">Latest Matches</h3></th>
+                    
+                    <tr><td class="attributes" colspan="3"><p class="desc" id="round5" > Round</p></td></tr>          
+                    <tr>
+                        <td>
+                            <img src="" alt="place holder" id="home_logo5">
+                            <p class="attributes" id="home_team5" > Team 1</p>
+                            <p class="desc" id="home_short5"> Short 1</p>
+                        </td>
+                        <td class="attributes"><p class="attributes" id="vs">vs</p></td>
+                        <td > 
+                            <img src="" alt="place holder" id="away_logo5">
+                            <p class="attributes" id="away_team5"> Team 2</p>
+                            <p class="desc" id="away_short5"> Short 2</p>
+                        </td>
+                    </tr>
+                    <tr><td colspan="3" ><h3 id="score5"> Score</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="attributes" colspan="3"><p class="desc" id="match_time5"> Date</p></td>
+                    </tr>   
+                    <tr>
+                        <td ><p class="desc" id="venue5"> Stadium</p></td>
+                        <td><p class="desc"> - </p></td>
+                        <td ><p class="desc" id="city5"> City</p></td>
+                    </tr>
+                </table>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <script src="/path/to/flickity.pkgd.min.js"></script> -->
+    <!-- <footer class="footer">
+        <div class="icons">
+        <p>
+            <a href="https://www.cafonline.com/" target="_blank"><span class="fa "></span></a>
+            <a href="https://www.instagram.com/caf_online/?hl=en" target="_blank"><span class="fa fa-instagram"></span></a>
+        </p>
+        </div>
+    </footer> -->
+    <div class = "footer">
+        <a href="https://www.cafonline.com/" class="fa fa-caf" alt="caf-online"></a>
+        <a href="https://www.instagram.com/caf_online/?hl=en" class="fa fa-instagram"></a>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
