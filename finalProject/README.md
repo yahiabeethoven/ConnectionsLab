@@ -183,9 +183,11 @@ despite being able to share video feed from the users, styling the video window 
 way and was challenging to re-style. However, we were able to have the two video feeds share a required square in the middle of the page.
 <img src="./docImages/cameras.png">
 ### Sharing-Data: 
-In order to have a seamless user experience the sound of the instruments needed to be produced upon contact of the wrist's coordinates with the instrument on the screen. Therefore, it was necessary to implement a system that would share with the other user the signals that would generate  the sounds activated. Using the Sharing Data function in P5 Livemedia we were able to share the required data. 
+In order to have a seamless user experience the sound of the instruments needed to be produced upon contact of the wrist's coordinates with the instrument on the screen. Therefore, it was necessary to implement a system that would share with the other user the signals that would generate  the sounds activated. Using the Sharing Data function in P5 Livemedia we were able to share the required data.
+<img src="./docImages/homePage.png">
 ### background music:
 One of the biggest challenges was implementing a system that allows the users to play background music. This feature had a lot of hidden challenges because it needs to allow the users to play a song and have it broadcasted to the other user then stopped once they decide to stop it. This issue has made implementing the feature challenging since the music needs to be coordinated and the second user needs to be aware of which song is playing.
+<img src="./docImages/buttonsPage.png">
 ### recording the sounds:
 In order to make the web application more engaging and interesting the sounds of the instruments need to seem professional and appealing. However, due to the shortage of available special sound effects online we had to improvise. We manually recorded and edited all the sound effects from different sources and added them to our product. Thus, we were able to provide high end, interesting sounds.
 
