@@ -1,0 +1,113 @@
+@font-face {
+/*   font-family: oleo-font; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  src: url("https://cdn.glitch.global/158f7402-3da5-43e6-935d-0b1c0068020f/OleoScript-Regular.ttf?v=1670755462734");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+  width: 100%;
+/*   background-repeat: repeat-y; */
+/*   max-width: fit-content; */
+    
+/*     /bodybeat/assets/background.png"); */
+ background-image: url("https://cdn.glitch.global/158f7402-3da5-43e6-935d-0b1c0068020f/01.jpg?v=1670817383700");
+/*   background-image: url("https://cdn.glitch.global/158f7402-3da5-43e6-935d-0b1c0068020f/image.png?v=1670816541894"); */
+  }
+
+  h2,button,input {
+    text-align: center;
+     
+/*     font-family: oleo-font; */
+  }
+
+
+h1 {
+  font-size: 8em;
+  margin:20px; 
+  background-color: ;
+  border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  
+}
+
+
+h2 {
+  font-size: 2em;
+   
+  color: black;
+  font-style: italic;
+  font-style: bold;
+ 
+  border-radius:20px;
+  
+}
+
+input {
+  font-size: 1.5em;
+  background-color:snow;
+  
+}
+::placeholder {
+  color: navy;
+   opacity: 0.5;
+  font-style: italic;
+}
+input:focus {
+  color: navy;
+}
+#button-container {
+  display: inline-block;
+  margin-top: 100px;
+}
+button {
+  font-size: 1em;
+  background-color: lightcyan;
+  font-style: italic;
+  cursor: pointer;
+}
+button:hover {
+  background-color: skyblue;
+}
+
+#roomName {
+  margin: 10px;
+  padding: 10px;
+  border-radius:20px;
+}
+
+#joinRoom {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+
+  background-color: skyblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  
+}
+
+#joinRoom:hover {background-color: darkblue;
+  color:white;
+ cursor: pointer;}
+
+#joinRoom:active {
+  
+  background-color: darkblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

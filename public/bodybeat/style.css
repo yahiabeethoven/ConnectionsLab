@@ -1,0 +1,159 @@
+@font-face {
+  font-family: oleo-font;
+  src: url("https://cdn.glitch.global/158f7402-3da5-43e6-935d-0b1c0068020f/OleoScript-Regular.ttf?v=1670755462734");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #bbe1ac 0%,
+    #a5d8c4 20%,
+    hsl(283, 40%, 76%) 70%,
+    #fbea9d 80%
+  );
+  /*   background-image: url("assets/background.jpeg"); */
+}
+canvas {
+  display: block;
+  border-radius: 5%;
+  /*   height: 800px;
+  width: 400px; */
+  margin-top: 3%;
+  border: 5px solid black;
+/*   margin-bottom: 3%; */
+}
+h1,
+h2,
+label {
+  font-size: 2px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  color: white;
+  margin: 5px;
+}
+#clicked {
+  height: 13px;
+  width: 13px;
+  background-color: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+}
+h2 {
+  margin-top: 1px;
+  font-size: 2.3em;
+  color: white;
+}
+
+p {
+  font-size: 0.6em;
+  text-align: center;
+  color: white;
+  margin: 15px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+label {
+  color: black;
+  font-size: 1em;
+}
+
+.label-checkbox {
+  display: inline-block;
+  padding: 1em;
+  background: #eee;
+}
+
+#container {
+  /*   height: 10vh; */
+  display: flex;
+/*   margin-top: 20px; */
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: column;
+}
+
+#input-container {
+  /*   border: 0.5px solid #494949; */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffc9f1;
+  margin: 15px;
+}
+#background-container {
+  /*   border: 0.5px solid #494949; */
+  border-radius: 10px;
+  padding: 10px;
+  background-color: hwb(85 61% 9%);
+  margin: 15px;
+  text-align: center;
+}
+
+#help_container {
+  margin: 10px;
+  font-size: 2.4em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+/* change input button circle color */
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #494949;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+#button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-bottom: 20px;
+  margin-top:10px;
+/*   top: 11%; */
+/*   left: 55%; */
+}
+
+#button:hover {
+  background-color: #3e8e41;
+}
+
+#button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
